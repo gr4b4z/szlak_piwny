@@ -3,6 +3,8 @@ package com.becons.the.piwnyszlak;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -59,7 +61,20 @@ public class MapsActivity extends FragmentActivity {
      * <p/>
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
+   public Place[] Places = new Place[]{
+            new Place(50.061921, 19.942505,"House of beer"),
+            new Place(50.063794, 19.938900,"Pod papugami"),
+            new Place(50.063433, 19.937226,"Carpe diem")
+    };
+
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        mMap.setMyLocationEnabled(true);
+        for(Place p : Places) {
+            mMap.addMarker(new MarkerOptions().position(new LatLng(p.Location[0], p.Location[1])).title(p.Name).snippet("We got a promotion for a beer from Lwowek Slaski"));
+        }
+        LatLng coordinate = new LatLng(50.050629, 19.946698);
+        CameraUpdate yourLocation = CameraUpdateFactory.newLatLngZoom(coordinate, 10);
+        mMap.animateCamera(yourLocation);
+
     }
 }
