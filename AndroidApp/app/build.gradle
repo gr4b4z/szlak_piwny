@@ -20,8 +20,14 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile 'com.google.android.gms:play-services:7.3.0'
-	compile 'com.kontakt.sdk.android:kontakt.io-android-sdk:2.0.0'
+    compile 'com.kontakt.sdk.android:kontakt.io-android-sdk:2.0.0'
+    compile files('C:/dev/private-code/szlak_piwny/AndroidApp/libs/core-1.4.4.jar')
+    compile files('C:/dev/private-code/szlak_piwny/AndroidApp/libs/dagger-1.1.0.jar')
+    compile files('C:/dev/private-code/szlak_piwny/AndroidApp/libs/dagger-compiler-1.1.0.jar')
+    compile files('C:/dev/private-code/szlak_piwny/AndroidApp/libs/javawriter.jar')
+    compile files('C:/dev/private-code/szlak_piwny/AndroidApp/libs/javax.inject.jar')
+    compile files('C:/dev/private-code/szlak_piwny/AndroidApp/libs/tappoint-v2.0.0.gbbf40c0.jar')
 }
