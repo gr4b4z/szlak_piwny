@@ -3,7 +3,6 @@
 buildscript {
     repositories {
         jcenter()
-		 maven { url 'http://repo.kontakt.io/repository/internal/' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.2.3'
