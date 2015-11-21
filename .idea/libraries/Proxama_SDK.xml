@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Proxama SDK">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/AndroidApp/libs/core-1.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AndroidApp/libs/dagger-1.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AndroidApp/libs/dagger-compiler-1.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AndroidApp/libs/javawriter.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AndroidApp/libs/javax.inject.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AndroidApp/libs/tappoint-v2.0.0.gbbf40c0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/AndroidApp/libs/tappoint-v2.0.0.gbbf40c0.jar!/" />
+    </SOURCES>
+  </library>
+</component>
