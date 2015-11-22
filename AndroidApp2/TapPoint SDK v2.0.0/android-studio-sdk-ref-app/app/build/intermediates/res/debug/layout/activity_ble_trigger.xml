@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_toolbar"
+        android:title="@string/app_name"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <ProgressBar
+            android:id="@+id/pbProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvBeaconEventList"
+        android:layout_width="match_parent"
+        android:overScrollMode="always"
+
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
+<!-- From: file:/C:/Users/rr196081/Desktop/TapPoint%20SDK%20v2.0.0/TapPoint%20SDK%20v2.0.0/android-studio-sdk-ref-app/app/src/main/res/layout/activity_ble_trigger.xml -->

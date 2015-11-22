@@ -1,0 +1,12 @@
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\classes\debug
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\javax.inject-ba881671a1093dc94c1405e38231cf7eb45ba4be.jar
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-1d10abe5488c4bf5f696b945542043d7d77bfe75.jar
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\javawriter-0cdda3763dc98f32edf63b3d619e86ccf0049eb1.jar
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\dagger-1.1.0-6b8c0034d6e353845226cd35e743b7837501f919.jar
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\dagger-compiler-1.1.0-7534f59e54cc50b7f4e90249cff6dcfb8044cc22.jar
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\core-1.4.4-74a2054652dcf9a7a5fcf3995a548f40647a166a.jar
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-3931eda7a17bdd0f9c64e4292b342eac741861b1.jar
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\classes-abd369a931a907a7fa19384fa212b98fd2908282.jar
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\tappoint-v2.0.0.gbbf40c0-ddf33a172e90346e19bc91bdbc08a023c990a2e9.jar
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\classes-bc92dc56c5de58005e9e317e3a43d21b10c3bed3.jar
+C:\Users\rr196081\Desktop\TapPoint SDK v2.0.0\TapPoint SDK v2.0.0\android-studio-sdk-ref-app\app\build\intermediates\pre-dexed\debug\classes-215f08dcc16424ce4a6055fda5bd11bba36cf3b2.jar
