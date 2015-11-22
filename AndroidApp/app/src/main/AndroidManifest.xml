@@ -2,92 +2,94 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.becons.the.piwnyszlak" >
 
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-	<uses-permission android:name="android.permission.BLUETOOTH"/>
-	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-	<uses-permission android:name="android.permission.WAKE_LOCK"/>
-	<!--
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--
  The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but are recommended.
     -->
-	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-	<application
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-		<meta-data
+        <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-		<meta-data
+        <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="@string/google_maps_key" />
 
-		<activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" >
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
 
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
-			<service android:name="com.kontakt.sdk.android.ble.service.ProximityService" android:exported="false"/>	
-		</activity>
-		<uses-feature
-			android:name="android.hardware.bluetooth_le"
-			android:required="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-		<service android:name="com.proxama.tappointauth.sync.SyncService"/>
-		<service android:name="com.proxama.trigger.ble.BleTriggerService"/>
-		<service android:name="com.proxama.ble.BleScannerManagerImpl"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-		<receiver android:name="com.proxama.ble.BleScannerBroadcastReceiver">
-			<intent-filter>
-				<action android:name="com.proxama.ble.scanner.ACTION_SCHEDULE_SCAN"/>
-			</intent-filter>
-			<intent-filter>
-				<action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
-			</intent-filter>
-			<intent-filter>
-				<action android:name="android.intent.action.BOOT_COMPLETED" />
-			</intent-filter>
-			<intent-filter>
-				<action android:name="android.intent.action.QUICKBOOT_POWERON" />
-			</intent-filter>
-		</receiver>
+        <uses-feature
+            android:name="android.hardware.bluetooth_le"
+            android:required="true" />
 
-		<receiver android:name="com.proxama.trigger.ble.BleScanEventReceiver"
-			android:exported="false" >
-			<intent-filter>
-				<action android:name="com.proxama.ble.scanner.ACTION_SCAN_COMPLETE" />
-			</intent-filter>
-		</receiver>
+        <service android:name="com.proxama.tappointauth.sync.SyncService" />
+        <service android:name="com.proxama.trigger.ble.BleTriggerService" />
+        <service android:name="com.proxama.ble.BleScannerManagerImpl" />
 
-		<provider
-	android:name="com.proxama.trigger.ble.model.dao.BleTriggerProvider"
-		android:authorities="com.becons.the.piwnyszlak.bletriggerprovider"
-		android:exported="false">
-	<!-- android:authorities="com.proxama.tpsdkreferenceapp.bletriggerprovider" -->
+        <receiver android:name="com.proxama.ble.BleScannerBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.proxama.ble.scanner.ACTION_SCHEDULE_SCAN" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.proxama.trigger.ble.BleScanEventReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.proxama.ble.scanner.ACTION_SCAN_COMPLETE" />
+            </intent-filter>
+        </receiver>
 
-	
-		</provider>
+        <provider
+            android:name="com.proxama.trigger.ble.model.dao.BleTriggerProvider"
+            android:authorities="com.becons.the.piwnyszlak.bletriggerprovider"
+            android:exported="false" >
 
-		<receiver android:name="com.proxama.tpsdkreferenceapp.BleTriggerReceiver">
-			<intent-filter>
-				<action android:name="com.proxama.tappoint.action.ACTION_TRIGGERS_DETECTED"/>
-			</intent-filter>
-		</receiver>
-		<receiver android:name="com.proxama.tappoint.internal.trigger.module.BleTriggerEventReceiver" >
-			<intent-filter>
-				<action android:name="com.proxama.trigger.ble.processor.TRIGGEREVENTS" />
-			</intent-filter>
-		</receiver>
-	</application>
+            <!-- android:authorities="com.proxama.tpsdkreferenceapp.bletriggerprovider" -->
+
+        </provider>
+
+        <receiver android:name="com.proxama.tpsdkreferenceapp.BleTriggerReceiver" >
+            <intent-filter>
+                <action android:name="com.proxama.tappoint.action.ACTION_TRIGGERS_DETECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.proxama.tappoint.internal.trigger.module.BleTriggerEventReceiver" >
+            <intent-filter>
+                <action android:name="com.proxama.trigger.ble.processor.TRIGGEREVENTS" />
+            </intent-filter>
+        </receiver>
+
+    </application>
 
 </manifest>
